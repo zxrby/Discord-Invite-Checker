@@ -6,7 +6,6 @@ import urllib3
 from pystyle import Write, System, Colors, Colorate, Anime
 from colorama import Fore as f
 import datetime
-import requests
 import random
 import time
 import threading
