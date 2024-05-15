@@ -75,6 +75,9 @@ def get_discord_invite_info():
                 print(f"{Fore.MAGENTA}[{time_rn}] [{Fore.GREEN}{invite_code}{Fore.MAGENTA}]{Fore.WHITE} Online members[{online}] Offline[{offline}] Statuscode[{response.status_code}] \u2705")
                 with open('working.txt', 'a') as works_file:
                     works_file.write(invite_code + '\n')
+                with open('capture.txt', 'a') as capture_file:
+                    capture_file.write(f"{invite_code} Online {online} Offline {offline}\n")
+                
             elif response.status_code == 404:
                 print(f"{Fore.MAGENTA}[{time_rn}] [{Fore.RED}{invite_code}{Fore.MAGENTA}]{Fore.WHITE} Invalid Invitecode Statuscode[{response.status_code}] \u2705")
                 with open('notworking.txt', 'a') as notworking_file:
